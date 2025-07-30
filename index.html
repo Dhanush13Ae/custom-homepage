@@ -1,66 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Custom Homepage</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      background: url('mywallpaper.png') no-repeat center center fixed;
-      background-size: cover;
+      width: 100vw;
       height: 100vh;
+      max-width: 1080px;
+      max-height: 2400px;
+      overflow: hidden;
       font-family: sans-serif;
+      background-image: url('mywallpaper.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: white;
+      box-sizing: border-box;
     }
 
-    .shortcuts {
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      padding: 2rem 1rem;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .favorites-wrapper {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 1rem;
+      border-radius: 20px;
+      display: flex;
       flex-wrap: wrap;
-      margin-top: 100px;
-      gap: 20px;
+      justify-content: center;
+      gap: 1rem;
+      max-width: 95%;
     }
 
-    .shortcut {
+    .fav-site {
+      width: 64px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      width: 100px;
-    }
-
-    .shortcut img {
-      width: 60px;
-      border-radius: 15px;
-    }
-
-    .shortcut a {
-      text-decoration: none;
       color: white;
-      display: block;
-      margin-top: 5px;
+      text-decoration: none;
+      font-size: 0.75rem;
+    }
+
+    .fav-site img {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 6px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      margin-bottom: 0.5rem;
+    }
+
+    .fav-site span {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
     }
   </style>
 </head>
 <body>
-  <div class="shortcuts">
-    <div class="shortcut">
-      <a href="https://amazon.in">
-        <img src="icons/amazon.png" alt="Amazon">
-        <span>Amazon</span>
+  <div class="overlay">
+    <h1>Welcome 🌍</h1>
+    <div class="favorites-wrapper">
+      <a class="fav-site" href="https://youtube.com">
+        <img src="https://www.google.com/s2/favicons?domain=youtube.com" alt="YouTube">
+        <span>YouTube</span>
       </a>
-    </div>
-    <div class="shortcut">
-      <a href="https://chat.openai.com">
-        <img src="icons/chatgpt.png" alt="ChatGPT">
-        <span>ChatGPT</span>
+      <a class="fav-site" href="https://github.com">
+        <img src="https://www.google.com/s2/favicons?domain=github.com" alt="GitHub">
+        <span>GitHub</span>
       </a>
-    </div>
-    <div class="shortcut">
-      <a href="https://open.spotify.com">
-        <img src="icons/spotify.png" alt="Spotify">
+      <a class="fav-site" href="https://reddit.com">
+        <img src="https://www.google.com/s2/favicons?domain=reddit.com" alt="Reddit">
+        <span>Reddit</span>
+      </a>
+      <a class="fav-site" href="https://spotify.com">
+        <img src="https://www.google.com/s2/favicons?domain=spotify.com" alt="Spotify">
         <span>Spotify</span>
       </a>
+      <a class="fav-site" href="https://chat.openai.com">
+        <img src="https://www.google.com/s2/favicons?domain=chat.openai.com" alt="ChatGPT">
+        <span>ChatGPT</span>
+      </a>
+      <!-- Add more icons below -->
     </div>
-    <!-- Add more as needed -->
   </div>
 </body>
 </html>
