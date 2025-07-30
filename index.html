@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Custom Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background-image: url('https://source.unsplash.com/random/1920x1080?nature'); /* Change to your image */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      min-height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .favorites {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .fav-site {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      width: 120px;
+      backdrop-filter: blur(4px);
+    }
+
+    .fav-site a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .fav-site img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Welcome 🌍</h1>
+    <div class="favorites">
+      <div class="fav-site">
+        <a href="https://youtube.com">
+          <img src="https://www.google.com/s2/favicons?domain=youtube.com" alt="YouTube" />
+          <div>YouTube</div>
+        </a>
+      </div>
+      <div class="fav-site">
+        <a href="https://github.com">
+          <img src="https://www.google.com/s2/favicons?domain=github.com" alt="GitHub" />
+          <div>GitHub</div>
+        </a>
+      </div>
+      <div class="fav-site">
+        <a href="https://reddit.com">
+          <img src="https://www.google.com/s2/favicons?domain=reddit.com" alt="Reddit" />
+          <div>Reddit</div>
+        </a>
+      </div>
+      <!-- Add more sites here -->
+    </div>
+  </div>
+</body>
+</html>
