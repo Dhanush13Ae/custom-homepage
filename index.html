@@ -10,8 +10,6 @@
       padding: 0;
       width: 100vw;
       height: 100vh;
-      max-width: 1080px;
-      max-height: 2400px;
       overflow: hidden;
       font-family: sans-serif;
       background-image: url('mywallpaper.png');
@@ -33,12 +31,6 @@
       box-sizing: border-box;
     }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 2rem;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
-    }
-
     .favorites-wrapper {
       background: rgba(0, 0, 0, 0.6);
       padding: 1rem;
@@ -46,29 +38,30 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 1rem;
-      max-width: 95%;
+      gap: 0.75rem;
+      max-width: 100%;
     }
 
     .fav-site {
-      width: 64px;
+      width: 56px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       color: white;
       text-decoration: none;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
     }
 
     .fav-site img {
-      width: 48px;
-      height: 48px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.1);
-      padding: 6px;
+      padding: 5px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
+      image-rendering: auto;
     }
 
     .fav-site span {
@@ -77,33 +70,37 @@
       text-overflow: ellipsis;
       width: 100%;
     }
+
+    @media (max-width: 600px) {
+      .fav-site {
+        width: 20%;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="overlay">
-    <h1>Welcome 🌍</h1>
     <div class="favorites-wrapper">
       <a class="fav-site" href="https://youtube.com">
-        <img src="https://www.google.com/s2/favicons?domain=youtube.com" alt="YouTube">
+        <img src="https://icons.duckduckgo.com/ip2/youtube.com.ico" alt="YouTube">
         <span>YouTube</span>
       </a>
       <a class="fav-site" href="https://github.com">
-        <img src="https://www.google.com/s2/favicons?domain=github.com" alt="GitHub">
+        <img src="https://icons.duckduckgo.com/ip2/github.com.ico" alt="GitHub">
         <span>GitHub</span>
       </a>
       <a class="fav-site" href="https://reddit.com">
-        <img src="https://www.google.com/s2/favicons?domain=reddit.com" alt="Reddit">
+        <img src="https://icons.duckduckgo.com/ip2/reddit.com.ico" alt="Reddit">
         <span>Reddit</span>
       </a>
       <a class="fav-site" href="https://spotify.com">
-        <img src="https://www.google.com/s2/favicons?domain=spotify.com" alt="Spotify">
+        <img src="https://icons.duckduckgo.com/ip2/spotify.com.ico" alt="Spotify">
         <span>Spotify</span>
       </a>
       <a class="fav-site" href="https://chat.openai.com">
-        <img src="https://www.google.com/s2/favicons?domain=chat.openai.com" alt="ChatGPT">
+        <img src="https://icons.duckduckgo.com/ip2/chat.openai.com.ico" alt="ChatGPT">
         <span>ChatGPT</span>
       </a>
-      <!-- Add more icons below -->
     </div>
   </div>
 </body>
