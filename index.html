@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Custom Home</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: url('mywallpaper.png') no-repeat center center fixed;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('mywallpaper.png');
       background-size: cover;
-      font-family: sans-serif;
+      background-position: center;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      padding: 20px;
     }
 
     .shortcut-container {
-      background-color: rgba(30, 30, 30, 0.75);
+      background: rgba(0, 0, 0, 0.5);
+      padding: 15px;
       border-radius: 20px;
-      padding: 20px 10px;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       justify-content: center;
-      gap: 16px;
-      max-width: 90vw;
+      width: 100%;
+      max-width: 1080px;
+      overflow-x: auto;
     }
 
     .fav-site {
-      text-align: center;
-      width: 64px;
-      font-size: 0.75rem;
-      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
       text-decoration: none;
+      color: white;
+      width: 60px;
+      flex-shrink: 0;
     }
 
     .fav-site img {
@@ -43,45 +52,57 @@
       border-radius: 50%;
       margin-bottom: 6px;
       object-fit: cover;
+      background: #222;
     }
 
-    @media (min-width: 600px) {
+    .fav-site span {
+      font-size: 12px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
       .fav-site {
-        width: 72px;
-        font-size: 0.8rem;
+        width: 48px;
+        margin: 0 6px;
       }
 
       .fav-site img {
-        width: 56px;
-        height: 56px;
+        width: 36px;
+        height: 36px;
+      }
+
+      .fav-site span {
+        font-size: 10px;
       }
     }
   </style>
 </head>
-
 <body>
   <div class="shortcut-container">
-    <a class="fav-site" href="https://youtube.com">
+    <a class="fav-site" href="https://youtube.com" target="_blank">
       <img src="https://icons.duckduckgo.com/ip3/youtube.com.ico" alt="YouTube">
-      YouTube
+      <span>YouTube</span>
     </a>
-    <a class="fav-site" href="https://github.com">
+    <a class="fav-site" href="https://github.com" target="_blank">
       <img src="https://icons.duckduckgo.com/ip3/github.com.ico" alt="GitHub">
-      GitHub
+      <span>GitHub</span>
     </a>
-    <a class="fav-site" href="https://reddit.com">
+    <a class="fav-site" href="https://reddit.com" target="_blank">
       <img src="https://icons.duckduckgo.com/ip3/reddit.com.ico" alt="Reddit">
-      Reddit
+      <span>Reddit</span>
     </a>
-    <a class="fav-site" href="https://spotify.com">
+    <a class="fav-site" href="https://spotify.com" target="_blank">
       <img src="https://icons.duckduckgo.com/ip3/spotify.com.ico" alt="Spotify">
-      Spotify
+      <span>Spotify</span>
     </a>
-    <a class="fav-site" href="https://chat.openai.com">
+    <a class="fav-site" href="https://chat.openai.com" target="_blank">
       <img src="https://icons.duckduckgo.com/ip3/chat.openai.com.ico" alt="ChatGPT">
-      ChatGPT
+      <span>ChatGPT</span>
     </a>
   </div>
 </body>
-
 </html>
